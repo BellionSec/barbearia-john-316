@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <meta name="description" content="Barbearia John 3.16 - Experiência premium em cuidados masculinos com cortes modernos e clássicos">
+    <meta name="keywords" content="barbearia, corte de cabelo, barba, serviços masculinos, barbearia premium, John 3.16">
+    <meta name="author" content="BellionDev">
+    <meta property="og:title" content="Barbearia John 3.16 - Experiência Premium">
+    <meta property="og:description" content="Conheça a Barbearia John 3.16, onde oferecemos muito mais que um simples corte. Nossa missão é proporcionar uma experiência completa de cuidado masculino.">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:url" content="https://barbeariajohn316.com.br">
+    <meta property="og:type" content="website">
+    <meta name="revisit-after" content="7 days">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="geo.placename" content="Maranhão">
+
+    <title>Barbearia John 3.16</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" as="style">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    
+    <!-- Estilo inicial para evitar flash de fundo branco -->
+    <style>     
+        html, body {
+            background-color: #1E1E1E !important;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Estilo para garantir visibilidade dos textos */
+        section h2 {
+            color: #D5A97C !important;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .barbers h2, 
+        .about h2 {
+            color: #D5A97C !important;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .about p {
+            color: #F5F0E5 !important;
+            line-height: 1.8;
+        }
+        
+        .footer {
+            background-color: #262626 !important;
+            border-top: 1px solid #C08C5C;
+        }
+        
+        .footer-info p {
+            color: #D5A97C !important;
+        }
+        
+        .social-links .social-icon {
+            color: #D5A97C !important;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="css/unified.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="css/mobile-fix.css">
+    <link rel="stylesheet" href="css/fixed.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: #1E1E1E;">
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="Barbearia John 3.16" class="logo-img">
+                </a>
+            </div>
+            <button id="menu-button" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#servicos"><i class="fas fa-cut fa-fw"></i> Serviços</a></li>
+                <li><a href="#assinatura"><i class="fas fa-crown fa-fw"></i> Assinatura</a></li>
+                <li><a href="#faq"><i class="fas fa-question-circle fa-fw"></i> FAQ</a></li>
+                <li><a href="#barbeiros"><i class="fas fa-user-tie fa-fw"></i> Barbeiros</a></li>
+                <li><a href="#sobre"><i class="fas fa-info-circle fa-fw"></i> Sobre</a></li>
+                <li><a href="#contato"><i class="fas fa-envelope fa-fw"></i> Contato</a></li>
+                <li><a href="#app"><i class="fas fa-mobile-alt fa-fw"></i> App</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="background-color: #1E1E1E;">
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <img src="images/logo-hero.png" alt="Barbearia John 3.16" class="hero-logo">
+                <p>A experiência definitiva em cuidado masculino: barbearia exclusiva com assinatura ilimitada!</p>
+                <a href="https://sites.appbarber.com.br/BARBEARIAJOHN316" target="_blank" class="cta-button">Agende seu horário</a>
+            </div>
+        </section>
+
+        <!-- Separador com imagem de fundo 1 -->
+        <section class="section-with-bg bg-separator-1" style="background-color: #1E1E1E;">
+            <div class="content">
+                <h2>Experiência Premium</h2>
+                <p>Na Barbearia John 3.16, oferecemos muito mais que um simples corte. Nossa missão é proporcionar uma experiência completa de cuidado masculino em um ambiente acolhedor e profissional.</p>
+            </div>
+        </section>
+
+        <section id="servicos" class="services">
+            <h2>Nossos Serviços</h2>
+            <p class="services-hint desktop-only">Passe o mouse nas laterais para navegar entre os serviços →</p>
+            <p class="services-hint mobile-only">Deslize para navegar entre os serviços →</p>
+            <div class="services-carousel">
+                <div class="hover-area-left"></div>
+                <div class="hover-area-right"></div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/corte.jpg" alt="Corte de Cabelo">
+                        </div>
+                        <h3>Corte de Cabelo</h3>
+                        <p>Cortes modernos e clássicos.</p>
+                        <span class="price">R$ 30,00</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/freestyle.jpg" alt="Corte Freestyle">
+                        </div>
+                        <h3>Corte Freestyle</h3>
+                        <p>Cortes artísticos e personalizados para seu estilo único.</p>
+                        <span class="price">R$ 35,00</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/barba.jpg" alt="Barba">
+                        </div>
+                        <h3>Barba</h3>
+                        <p>Modelagem e acabamento perfeito para sua barba.</p>
+                        <span class="price">R$ 30,00</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/sobrancelha.jpg" alt="Sobrancelha">
+                        </div>
+                        <h3>Sobrancelha</h3>
+                        <p>Design e alinhamento para realçar sua expressão.</p>
+                        <span class="price">R$ 10,00</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/depilacao.jpg" alt="Depilação Nasal">
+                        </div>
+                        <h3>Depilação Nasal</h3>
+                        <p>Remoção segura e higiênica dos pelos nasais.</p>
+                        <span class="price">R$ 10,00</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/hidratacao.jpg" alt="Hidratação Capilar">
+                        </div>
+                        <h3>Hidratação Capilar</h3>
+                        <p>Tratamento profundo para revitalizar seus cabelos.</p>
+                        <span class="price">R$ 30,00</span>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/pigmentacao.jpg" alt="Pigmentação">
+                        </div>
+                        <h3>Pigmentação</h3>
+                        <p>Correção e preenchimento para barba e cabelo.</p>
+                        <span class="price">R$ 30,00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separador com imagem de fundo 2 -->
+        <section class="section-with-bg bg-separator-2">
+            <div class="content">
+                <h2>Tradição e Modernidade</h2>
+                <p>Combinamos técnicas tradicionais com tendências contemporâneas para criar o visual perfeito que reflete sua personalidade e estilo.</p>
+            </div>
+        </section>
+
+        <section id="assinatura" class="subscription">
+            <h2>Clube de Assinatura</h2>
+            <div class="subscription-intro">
+                <p>Seja membro do nosso clube exclusivo e aproveite benefícios únicos:</p>
+                <ul class="benefits-list">
+                    <li>✓ Preços especiais em todos os serviços</li>
+                    <li>✓ Agendamento prioritário</li>
+                    <li>✓ Produtos exclusivos</li>
+                    <li>✓ Atendimento VIP</li>
+                </ul>
+            </div>
+            <div id="subscription-content" class="subscription-grid">
+                <div class="subscription-card">
+                    <div class="subscription-image">
+                        <img src="images/club.png" alt="Plano Cabelo">
+                    </div>
+                    <h3>Plano Cabelo</h3>
+                    <p class="subscription-price">R$ 97,00/mês</p>
+                    <ul>
+                        <li>Cortes ilimitados</li>
+                        <li>5% de desconto em produtos</li>
+                        <li>Agendamento prioritário</li>
+                    </ul>
+                    <a href="https://app.galaxpay.com.br/landingpage8965649/principal/assinar/cabelo-club/3" target="_blank" class="cta-button">Assinar Plano</a>
+                </div>
+                <div class="subscription-card featured">
+                    <div class="subscription-image">
+                        <img src="images/club.png" alt="Plano Completo">
+                    </div>
+                    <h3>Plano Completo</h3>
+                    <p class="subscription-price">R$ 149,90/mês</p>
+                    <ul>
+                        <li>Cortes ilimitados</li>
+                        <li>Barbas ilimitadas</li>
+                        <li>5% de desconto em produtos</li>
+                        <li>Agendamento prioritário</li>
+                        <li>Produtos exclusivos mensais</li>
+                    </ul>
+                    <a href="https://app.galaxpay.com.br/landingpage8965649/principal/assinar/cabelo-e-barba-club/4" target="_blank" class="cta-button">Assinar Plano</a>
+                </div>
+                <div class="subscription-card">
+                    <div class="subscription-image">
+                        <img src="images/club.png" alt="Plano Barba">
+                    </div>
+                    <h3>Plano Barba</h3>
+                    <p class="subscription-price">R$ 97,00/mês</p>
+                    <ul>
+                        <li>Barbas ilimitadas</li>
+                        <li>5% de desconto em produtos</li>
+                        <li>Agendamento prioritário</li>
+                    </ul>
+                    <a href="https://app.galaxpay.com.br/landingpage8965649/principal/assinar/barba-club/5" target="_blank" class="cta-button">Assinar Plano</a>
+                </div>
+            </div>
+            <div class="subscription-indicators">
+                <span class="indicator active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+            </div>
+        </section>
+
+        <!-- Seção de Dúvidas Frequentes (FAQ) -->
+        <section id="faq" class="faq-section">
+            <div class="faq-title">
+                <h2>Dúvidas Frequentes</h2>
+                <div class="mustache-icon">
+                    <i class="fas fa-cut"></i>
+                </div>
+                <p>FAQ</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <h3>Como funciona o agendamento?</h3>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Você agenda direto pelo nosso site ou app, de forma rápida e prática. É só escolher o serviço, seu barbeiro de confiança, data e horário disponíveis. Se preferir, também estamos no WhatsApp ou por ligação. Disponibilizamos agendamentos com até 7 dias de antecedência.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <h3>Como funcionam os planos de assinatura?</h3>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Assinou, usou. Simples assim! Com nossos planos mensais, você garante serviços ilimitados (cabelo, barba ou ambos) por um valor fixo. Além disso, tem prioridade nos agendamentos e ainda ganha desconto em produtos. A contratação é online, e o cancelamento é fácil, sem burocracia.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <h3>E se eu precisar cancelar um horário?</h3>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sem estresse! Só pedimos que avise com pelo menos 1 hora de antecedência. Isso nos ajuda a organizar melhor a agenda e atender outros clientes. Cancelamentos sem aviso prévio com frequência podem gerar restrições futuras, então, se surgir um imprevisto, é só dar um toque.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <h3>Atendem crianças também?</h3>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Com certeza! Nossos barbeiros estão preparados para atender os pequenos com paciência e carinho. Para crianças até 12 anos, é importante que estejam acompanhadas por um responsável.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <h3>Posso trazer meu próprio produto?</h3>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pode sim. Se você tem um produto específico que gosta ou precisa usar (por alergia, por exemplo), é só trazer. Ainda assim, nossa barbearia já oferece uma linha premium cuidadosamente escolhida pelos nossos profissionais.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <h3>Quanto tempo dura cada atendimento?</h3>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Depende do serviço. Um corte leva cerca de 30 minutos. Já um combo completo (corte + barba) pode durar até 1 hora. Se você for fazer hidratação ou pigmentação, reserve um tempinho extra. Aqui, cada cliente é atendido com calma e atenção aos detalhes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-question">
+                        <h3>Quais formas de pagamento são aceitas?</h3>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Aceitamos dinheiro, cartões (débito e crédito), PIX e transferências. As assinaturas são cobradas mensalmente apenas no cartão de crédito. Ficou com dúvida sobre outro meio de pagamento? Fale com a gente!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separador com imagem de fundo 3 -->
+        <section class="section-with-bg bg-separator-3">
+            <div class="content">
+                <h2>Profissionalismo em Cada Detalhe</h2>
+                <p>Nossa equipe de barbeiros qualificados está comprometida em oferecer serviços de excelência, utilizando os melhores produtos e técnicas do mercado.</p>
+            </div>
+        </section>
+
+        <section class="barbers" id="barbeiros">
+            <h2>Nossos Barbeiros</h2>
+            <div class="barbers-grid">
+                <div class="barber-card-new">
+                    <div class="barber-image-new">
+                        <img src="images/elias.jpg" alt="Barbeiro Elias">
+                    </div>
+                    <h3>Elias Santos</h3>
+                </div>
+                <div class="barber-card-new">
+                    <div class="barber-image-new">
+                        <img src="images/pedro.jpg" alt="Barbeiro Pedro">
+                    </div>
+                    <h3>Pedro Licor</h3>
+                </div>
+                <div class="barber-card-new">
+                    <div class="barber-image-new">
+                        <img src="images/thiago.jpg" alt="Barbeiro Thiago">
+                    </div>
+                    <h3>Thiago Diniz</h3>
+                </div>
+            </div>
+            
+            <!-- Indicadores de navegação para barbeiros no modo paisagem -->
+            <div class="barbers-indicators">
+                <div class="indicator active" data-index="0"></div>
+                <div class="indicator" data-index="1"></div>
+                <div class="indicator" data-index="2"></div>
+            </div>
+        </section>
+
+        <!-- Separador com imagem de fundo 4 -->
+        <section class="section-with-bg bg-separator-4">
+            <div class="content">
+                <h2>Seu Estilo, Nossa Paixão</h2>
+                <p>Cada cliente é único, e nosso compromisso é realçar sua personalidade através de um atendimento personalizado e atencioso.</p>
+            </div>
+        </section>
+
+        <section id="sobre" class="about" style="padding: 4rem 2rem; background-color: #1E1E1E;">
+            <h2 style="color: #D5A97C !important; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); text-align: center; margin-bottom: 2rem;">Sobre Nós</h2>
+            <p style="color: #F5F0E5; line-height: 1.8; max-width: 900px; margin: 0 auto 1.5rem;">A BARBEARIA JOHN 3.16 nasceu de um sonho — e se tornou um ponto de referência para quem valoriza estilo, cuidado pessoal e um atendimento fora do comum. Criada por Elias Santos, em 23 de dezembro de 2019, a nossa missão é clara: oferecer um serviço de excelência, com atenção aos detalhes e respeito ao seu tempo.</p>
+            <p style="color: #F5F0E5; line-height: 1.8; max-width: 900px; margin: 0 auto 1.5rem;">Aqui, cada cliente é tratado como prioridade. Desde o momento em que você entra, já sente a diferença: ambiente climatizado, poltronas confortáveis, música de qualidade, café sempre quentinho, e o clássico ritual da toalha quente na barba — tudo isso enquanto você cuida do visual com quem realmente entende do assunto.</p>
+            <p style="color: #F5F0E5; line-height: 1.8; max-width: 900px; margin: 0 auto 1.5rem;">Nossa equipe é formada por profissionais capacitados e em constante atualização, sempre de olho nas tendências de cortes masculinos, para que você esteja na régua e no estilo, seja qual for a ocasião.</p>
+            <p style="color: #F5F0E5; line-height: 1.8; max-width: 900px; margin: 0 auto 1.5rem;">E tem mais: você agenda seu horário com praticidade, direto pelo aplicativo, e ainda conta com estacionamento próprio — porque seu tempo e conforto também fazem parte da experiência.</p>
+        </section>
+
+        <section id="contato" class="contact">
+            <h2>Entre em Contato</h2>
+            <div class="contact-container">
+                <div class="contact-left-column">
+                    <div class="contact-info-wrapper">
+                        <div class="contact-info">
+                            <div class="contact-item horario">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Horário de Funcionamento</h3>
+                                    <p>Segunda a Sábado: 08h30 às 19h</p>
+                                    <p>Domingo: Fechado</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="map-container">
+                            <div class="location-header">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h3>Localização</h3>
+                            </div>
+                            <div class="map-frame-container">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.7824514559366!2d-44.20020152550797!3d-2.5773073383990304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f69bcfc432cccf%3A0x864c3124f19fb925!2sBARBEARIA%20JOHN%203.16!5e0!3m2!1spt-BR!2sbr!4v1744742393168!5m2!1spt-BR!2sbr" 
+                                    width="100%" 
+                                    height="300" 
+                                    style="border:0; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                            <div class="maps-link-container">
+                                <a href="https://maps.app.goo.gl/aFmkiRwJnNy8L5hw8" target="_blank" class="google-maps-link">
+                                    <i class="fas fa-external-link-alt"></i> Ver no Google Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-right-column">
+                    <div class="contact-social-wrapper">
+                        <div class="contact-social">
+                            <h3>Redes Sociais</h3>
+                            <div class="social-grid">
+                                <a href="https://www.instagram.com/barbearia_john3.16/" target="_blank" class="social-card">
+                                    <div class="social-icon">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <h4>Instagram</h4>
+                                        <p>@barbearia_john3.16</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="mailto:barbeariajohn3.16@gmail.com" target="_blank" class="social-card">
+                                    <div class="social-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <h4>Email</h4>
+                                        <p>barbeariajohn3.16</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://wa.me/5598984967343" target="_blank" class="social-card">
+                                    <div class="social-icon">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                    <div class="social-info">
+                                        <h4>WhatsApp</h4>
+                                        <p>(98) 98496-7343</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="scheduling-wrapper">
+                        <div class="scheduling-info">
+                            <h3>Agendamento</h3>
+                            <p>Faça seu agendamento de forma rápida e prática</p>
+                            <a href="https://sites.appbarber.com.br/BARBEARIAJOHN316" target="_blank" class="cta-button">Agendar Agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="app" class="download-app">
+            <h2>Baixe Nosso App</h2>
+            <p>Agende seus horários, receba promoções exclusivas e muito mais diretamente do seu celular.</p>
+            <div class="app-buttons">
+                <a href="https://play.google.com/store/apps/details?id=br.com.starapp.appbarbercli&pcampaignid=web_share" target="_blank" class="app-button google-play">
+                    <i class="fab fa-google-play"></i>
+                    <span class="app-button-text">
+                        <span class="small-text">Disponível no</span>
+                        <span class="large-text">Google Play</span>
+                    </span>
+                </a>
+                <a href="https://apps.apple.com/br/app/appbarber-cliente/id6450795073" target="_blank" class="app-button app-store">
+                    <i class="fab fa-apple"></i>
+                    <span class="app-button-text">
+                        <span class="small-text">Baixe na</span>
+                        <span class="large-text">App Store</span>
+                    </span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 Barbearia John 3.16. Todos os direitos reservados.</p>
+                <p>
+                    <a href="privacidade.html" style="color: #D5A97C; margin-right: 15px;">Política de Privacidade</a>
+                    <a href="termos.html" style="color: #D5A97C;">Termos de Uso</a>
+                </p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/barbearia_john3.16/" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:barbeariajohn3.16@gmail.com" target="_blank" class="social-icon email" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/5598984967343" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <!-- Script para destacar links ativos ao rolar a página -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Função para alternar a classe 'active' no menu de navegação
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            function highlightNavigation() {
+                let scrollPosition = window.scrollY + 100;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + sectionId) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
+            
+            // Evento para verificar a posição ao rolar
+            window.addEventListener('scroll', highlightNavigation);
+            
+            // Verificar também no carregamento inicial
+            highlightNavigation();
+        });
+    </script>
+    
+    <!-- Script para lidar com mudanças de orientação da tela -->
+    <script>
+        window.addEventListener('orientationchange', function() {
+            // Pequeno atraso para garantir que os estilos CSS sejam aplicados
+            setTimeout(function() {
+                // Força um re-render dos elementos
+                document.body.style.display = 'none';
+                document.body.offsetHeight; // Força um reflow
+                document.body.style.display = '';
+                
+                // Rolagem suave para a posição atual
+                const currentPosition = window.scrollY;
+                window.scrollTo({
+                    top: currentPosition,
+                    behavior: 'auto'
+                });
+            }, 100);
+        });
+        
+        // Verifica se o dispositivo é iOS (que tem problemas específicos com orientação)
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        
+        if (isIOS) {
+            window.addEventListener('resize', function() {
+                // Corrige problemas de dimensionamento em iOS
+                document.documentElement.style.height = `${window.innerHeight}px`;
+            });
+            // Aplicar uma vez no carregamento
+            document.documentElement.style.height = `${window.innerHeight}px`;
+        }
+    </script>
+
+    <!-- Script para navegação dos cards de planos -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const subscriptionGrid = document.querySelector('.subscription-grid');
+            const indicators = document.querySelectorAll('.indicator');
+            const cards = document.querySelectorAll('.subscription-card');
+            
+            if (!subscriptionGrid || !indicators.length || !cards.length) return;
+            
+            // Atualiza o indicador ativo com base no card visível
+            function updateActiveIndicator() {
+                // Apenas atualiza o indicador ativo, o CSS controla a exibição
+                const scrollPosition = subscriptionGrid.scrollLeft;
+                const cardWidth = subscriptionGrid.offsetWidth;
+                const activeIndex = Math.round(scrollPosition / cardWidth);
+                
+                indicators.forEach((indicator, index) => {
+                    if (index === activeIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Adiciona evento de clique aos indicadores
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function() {
+                    const cardWidth = subscriptionGrid.offsetWidth;
+                    subscriptionGrid.scrollTo({
+                        left: cardWidth * index,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Atualiza o indicador ativo
+                    indicators.forEach(ind => ind.classList.remove('active'));
+                    indicator.classList.add('active');
+                });
+            });
+            
+            // Ouve o evento de rolagem para atualizar o indicador
+            subscriptionGrid.addEventListener('scroll', updateActiveIndicator);
+            
+            // Ouve o evento de redimensionamento para recalcular
+            window.addEventListener('resize', updateActiveIndicator);
+            
+            // Ouve o evento de mudança de orientação
+            window.addEventListener('orientationchange', updateActiveIndicator);
+            
+            // Inicializa o primeiro card como ativo
+            setTimeout(updateActiveIndicator, 200);
+        });
+    </script>
+</body>
+</html>

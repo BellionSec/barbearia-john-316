@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Termos de Uso - Barbearia John 3.16</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" as="style">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    
+    <!-- Estilo inicial para evitar flash de fundo branco -->
+    <style>
+        html, body {
+            background-color: #1E1E1E !important;
+            margin: 0;
+            padding: 0;
+            color: #F5F0E5;
+        }
+        
+        .terms-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        main {
+            padding-top: 80px; /* Espaço para o menu fixo */
+        }
+        
+        .terms-content h1, 
+        .terms-content h2 {
+            color: #D5A97C !important;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .terms-content h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-family: 'Abril Fatface', serif;
+        }
+        
+        .terms-content h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .terms-content p,
+        .terms-content ul {
+            color: #F5F0E5 !important;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-family: 'Old Standard TT', serif;
+            font-size: 1.1rem;
+        }
+        
+        .terms-content ul {
+            padding-left: 2rem;
+        }
+        
+        .terms-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer {
+            background-color: #262626 !important;
+            border-top: 1px solid #C08C5C;
+        }
+        
+        .footer-info p {
+            color: #D5A97C !important;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #1E1E1E;
+            color: #D5A97C !important;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: 2px solid #D5A97C;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(213, 169, 124, 0.1) inset;
+        }
+        
+        .social-icon:hover {
+            background-color: #D5A97C;
+            color: #1E1E1E !important;
+            transform: scale(1.15);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4), 0 0 20px rgba(213, 169, 124, 0.3);
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #D5A97C;
+            color: #1E1E1E;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-family: 'Old Standard TT', serif;
+        }
+        
+        .back-to-home:hover {
+            background-color: #C08C5C;
+            transform: translateY(-2px);
+        }
+        
+        .last-updated {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #999;
+            text-align: center;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 50px;
+            height: 50px;
+            background-color: #9D6B3E; /* Marrom mais escuro que var(--secondary-color) */
+            color: #1E1E1E;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        
+        .back-to-top:hover {
+            background-color: #1E1E1E;
+            transform: translateY(-3px);
+            color: #D5A97C;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="css/unified.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="css/mobile-fix.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: #1E1E1E;">
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Barbearia John 3.16" class="logo-img">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main style="background-color: #1E1E1E;">
+        <section class="terms-content">
+            <h1>Termos de Uso</h1>
+            <p class="last-updated">Última atualização: 26 de Abril de 2025</p>
+            
+            <p>Bem-vindo à Barbearia John 3.16. Ao utilizar nossos serviços ou acessar nosso site, você concorda com estes Termos de Uso. Por favor, leia-os atentamente.</p>
+            
+            <h2>1. Aceitação dos Termos</h2>
+            <p>Ao acessar ou utilizar nosso site e serviços, você concorda em cumprir e estar vinculado a estes Termos de Uso. Se você não concordar com qualquer parte destes termos, pedimos que não utilize nossos serviços.</p>
+            
+            <h2>2. Agendamentos</h2>
+            <p>Para garantir a qualidade do atendimento para todos os clientes, solicitamos que você:</p>
+            <ul>
+                <li>Chegue com 5-10 minutos de antecedência para seu horário agendado</li>
+                <li>Cancele ou reagende com pelo menos 1 hora de antecedência</li>
+                <li>Forneça informações precisas ao agendar</li>
+            </ul>
+            <p>Em caso de não comparecimento sem aviso prévio, reservamo-nos o direito de aplicar uma taxa de cancelamento para futuros agendamentos.</p>
+            
+            <h2>3. Política de Cancelamento</h2>
+            <p>Cancelamentos devem ser feitos com pelo menos 1 hora de antecedência. Cancelamentos frequentes sem aviso prévio podem resultar em restrições para agendamentos futuros.</p>
+            
+            <h2>4. Comportamento nas Instalações</h2>
+            <p>Solicitamos que todos os clientes:</p>
+            <ul>
+                <li>Tratem a equipe e outros clientes com respeito</li>
+                <li>Não utilizem linguagem ofensiva ou comportamento inadequado</li>
+                <li>Não consumam bebidas alcoólicas nas dependências</li>
+                <li>Não fumem dentro do estabelecimento</li>
+            </ul>
+            
+            <h2>5. Menores de Idade</h2>
+            <p>Menores de 16 anos devem estar acompanhados por um responsável legal durante o atendimento. A Barbearia John 3.16 não se responsabiliza pela supervisão de menores desacompanhados.</p>
+            
+            <h2>6. Programa de Assinatura</h2>
+            <p>Para clientes que aderem ao nosso programa de assinatura:</p>
+            <ul>
+                <li>O pagamento é cobrado mensalmente na data de adesão</li>
+                <li>O cancelamento deve ser solicitado com 7 dias de antecedência da próxima cobrança</li>
+                <li>Os benefícios não são transferíveis a terceiros</li>
+                <li>O não comparecimento aos serviços inclusos não gera créditos ou restituições</li>
+            </ul>
+            
+            <h2>7. Direitos de Propriedade Intelectual</h2>
+            <p>Todo o conteúdo disponível em nosso site, incluindo mas não limitado a textos, gráficos, logotipos, imagens, vídeos, áudios e softwares, é propriedade da Barbearia John 3.16 e está protegido por leis de direitos autorais.</p>
+            
+            <h2>8. Uso do Site e Aplicativo</h2>
+            <p>Ao utilizar nosso site ou aplicativo, você concorda em não:</p>
+            <ul>
+                <li>Utilizar qualquer dispositivo, software ou rotina para interferir ou tentar interferir no funcionamento adequado</li>
+                <li>Tomar qualquer medida que imponha uma carga excessiva ou desproporcional à nossa infraestrutura</li>
+                <li>Fazer engenharia reversa, descompilar ou desmontar qualquer parte do site ou aplicativo</li>
+                <li>Coletar ou armazenar dados pessoais de outros usuários</li>
+            </ul>
+            
+            <h2>9. Limitação de Responsabilidade</h2>
+            <p>A Barbearia John 3.16 não será responsável por danos diretos, indiretos, incidentais, consequenciais ou punitivos decorrentes do uso ou incapacidade de usar nossos serviços, exceto conforme exigido por lei.</p>
+            
+            <h2>10. Imagens e Depoimentos</h2>
+            <p>Podemos solicitar permissão para utilizar fotos do seu corte ou barba para fins promocionais. Seu consentimento será solicitado explicitamente antes de qualquer uso. Você pode revogar este consentimento a qualquer momento.</p>
+            
+            <h2>11. Alterações nos Termos</h2>
+            <p>Reservamo-nos o direito de modificar estes Termos de Uso a qualquer momento. As alterações entrarão em vigor imediatamente após sua publicação. O uso contínuo dos nossos serviços após tais alterações constitui sua aceitação dos novos termos.</p>
+            
+            <h2>12. Lei Aplicável</h2>
+            <p>Estes Termos de Uso são regidos pelas leis brasileiras. Qualquer disputa decorrente destes termos será resolvida nos tribunais do Maranhão, Brasil.</p>
+            
+            <h2>13. Contato</h2>
+            <p>Se você tiver dúvidas sobre estes Termos de Uso, entre em contato conosco através do e-mail: barbeariajohn3.16@gmail.com ou pelo telefone: (98) 98496-7343.</p>
+            
+            <a href="index.html" class="cta-button">Voltar para a página inicial</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 Barbearia John 3.16. Todos os direitos reservados.</p>
+                <p>
+                    <a href="privacidade.html" style="color: #D5A97C; margin-right: 15px;">Política de Privacidade</a>
+                    <a href="termos.html" style="color: #D5A97C;">Termos de Uso</a>
+                </p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/barbearia_john3.16/" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:barbeariajohn3.16@gmail.com" target="_blank" class="social-icon email" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/5598984967343" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <script src="js/main.js"></script>
+    
+    <!-- Script para botão de voltar ao topo -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            if (backToTopButton) {
+                // Mostrar/ocultar botão com base na posição de rolagem
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 300) {
+                        backToTopButton.classList.add('visible');
+                    } else {
+                        backToTopButton.classList.remove('visible');
+                    }
+                });
+                
+                // Adicionar evento de clique para rolar para o topo
+                backToTopButton.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Política de Privacidade - Barbearia John 3.16</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" as="style">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    
+    <!-- Estilo inicial para evitar flash de fundo branco -->
+    <style>
+        html, body {
+            background-color: #1E1E1E !important;
+            margin: 0;
+            padding: 0;
+            color: #F5F0E5;
+        }
+        
+        .privacy-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        main {
+            padding-top: 80px; /* Espaço para o menu fixo */
+        }
+        
+        .privacy-content h1, 
+        .privacy-content h2 {
+            color: #D5A97C !important;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .privacy-content h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-family: 'Abril Fatface', serif;
+        }
+        
+        .privacy-content h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .privacy-content p,
+        .privacy-content ul {
+            color: #F5F0E5 !important;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-family: 'Old Standard TT', serif;
+            font-size: 1.1rem;
+        }
+        
+        .privacy-content ul {
+            padding-left: 2rem;
+        }
+        
+        .privacy-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer {
+            background-color: #262626 !important;
+            border-top: 1px solid #C08C5C;
+        }
+        
+        .footer-info p {
+            color: #D5A97C !important;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #1E1E1E;
+            color: #D5A97C !important;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: 2px solid #D5A97C;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(213, 169, 124, 0.1) inset;
+        }
+        
+        .social-icon:hover {
+            background-color: #D5A97C;
+            color: #1E1E1E !important;
+            transform: scale(1.15);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4), 0 0 20px rgba(213, 169, 124, 0.3);
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #D5A97C;
+            color: #1E1E1E;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-family: 'Old Standard TT', serif;
+        }
+        
+        .back-to-home:hover {
+            background-color: #C08C5C;
+            transform: translateY(-2px);
+        }
+        
+        .last-updated {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #999;
+            text-align: center;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 50px;
+            height: 50px;
+            background-color: #9D6B3E; /* Marrom mais escuro que var(--secondary-color) */
+            color: #1E1E1E;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        
+        .back-to-top:hover {
+            background-color: #1E1E1E;
+            transform: translateY(-3px);
+            color: #D5A97C;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="css/unified.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="css/mobile-fix.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: #1E1E1E;">
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Barbearia John 3.16" class="logo-img">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main style="background-color: #1E1E1E;">
+        <section class="privacy-content">
+            <h1>Política de Privacidade</h1>
+            <p class="last-updated">Última atualização: 26 de Abril de 2025</p>
+            
+            <p>A Barbearia John 3.16 valoriza a privacidade de seus clientes e visitantes. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais.</p>
+            
+            <h2>1. Informações Coletadas</h2>
+            <p>Coletamos as seguintes informações pessoais:</p>
+            <ul>
+                <li>Nome completo</li>
+                <li>Número de telefone</li>
+                <li>Endereço de e-mail</li>
+                <li>Preferências de serviços</li>
+                <li>Histórico de agendamentos</li>
+                <li>Informações de pagamento (quando aplicável)</li>
+            </ul>
+            
+            <h2>2. Uso das Informações</h2>
+            <p>Utilizamos suas informações pessoais para:</p>
+            <ul>
+                <li>Gerenciar seu agendamento de serviços</li>
+                <li>Processar pagamentos</li>
+                <li>Enviar notificações sobre seus agendamentos</li>
+                <li>Fornecer informações sobre promoções e novidades (com seu consentimento)</li>
+                <li>Melhorar nossos serviços e experiência do cliente</li>
+                <li>Cumprir obrigações legais</li>
+            </ul>
+            
+            <h2>3. Compartilhamento de Dados</h2>
+            <p>Não vendemos, alugamos ou comercializamos suas informações pessoais com terceiros para fins de marketing. Podemos compartilhar suas informações apenas nas seguintes situações:</p>
+            <ul>
+                <li>Com fornecedores de serviços que nos auxiliam (como processadores de pagamento ou plataforma de agendamento)</li>
+                <li>Quando exigido por lei ou ordem judicial</li>
+                <li>Para proteger nossos direitos e propriedades</li>
+            </ul>
+            
+            <h2>4. Armazenamento e Segurança</h2>
+            <p>Implementamos medidas técnicas e organizacionais para proteger suas informações pessoais contra acesso não autorizado, perda acidental ou alteração. Retemos suas informações apenas pelo tempo necessário para fornecer nossos serviços ou conforme exigido por lei.</p>
+            
+            <h2>5. Seus Direitos</h2>
+            <p>Você tem o direito de:</p>
+            <ul>
+                <li>Acessar suas informações pessoais</li>
+                <li>Corrigir dados inexatos</li>
+                <li>Solicitar a exclusão de seus dados (quando aplicável)</li>
+                <li>Retirar seu consentimento para comunicações de marketing</li>
+                <li>Solicitar informações sobre como seus dados são processados</li>
+            </ul>
+            
+            <h2>6. Cookies e Tecnologias Semelhantes</h2>
+            <p>Nosso site pode utilizar cookies e tecnologias semelhantes para melhorar sua experiência de navegação. Você pode configurar seu navegador para recusar cookies, no entanto, isso pode afetar a funcionalidade do site.</p>
+            
+            <h2>7. Menores de Idade</h2>
+            <p>Não coletamos intencionalmente informações pessoais de menores de 18 anos. Se você é pai ou responsável e acredita que seu filho nos forneceu informações pessoais, entre em contato conosco para que possamos tomar as medidas necessárias.</p>
+            
+            <h2>8. Alterações nesta Política</h2>
+            <p>Podemos atualizar esta Política de Privacidade periodicamente. Quaisquer alterações significativas serão notificadas através de nosso site ou por e-mail.</p>
+            
+            <h2>9. Contato</h2>
+            <p>Se você tiver dúvidas sobre esta Política de Privacidade ou sobre como tratamos suas informações pessoais, entre em contato conosco através do e-mail: barbeariajohn3.16@gmail.com ou pelo telefone: (98) 98496-7343.</p>
+            
+            <a href="index.html" class="cta-button">Voltar para a página inicial</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 Barbearia John 3.16. Todos os direitos reservados.</p>
+                <p>
+                    <a href="privacidade.html" style="color: #D5A97C; margin-right: 15px;">Política de Privacidade</a>
+                    <a href="termos.html" style="color: #D5A97C;">Termos de Uso</a>
+                </p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/barbearia_john3.16/" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:barbeariajohn3.16@gmail.com" target="_blank" class="social-icon email" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/5598984967343" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <script src="js/main.js"></script>
+    
+    <!-- Script para botão de voltar ao topo -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            if (backToTopButton) {
+                // Mostrar/ocultar botão com base na posição de rolagem
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 300) {
+                        backToTopButton.classList.add('visible');
+                    } else {
+                        backToTopButton.classList.remove('visible');
+                    }
+                });
+                
+                // Adicionar evento de clique para rolar para o topo
+                backToTopButton.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

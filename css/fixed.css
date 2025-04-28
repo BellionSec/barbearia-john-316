@@ -1,0 +1,495 @@
+/* 
+ * BARBEARIA JOHN 3.16 - CSS CORRIGIDO
+ * Este arquivo contém ajustes e correções para o site
+ */
+
+/* Correções para o menu mobile */
+@media (max-width: 768px) {
+    #menu-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1000;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    #menu-button span {
+        width: 100%;
+        height: 3px;
+        background-color: #D5A97C;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    #menu-button.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 8px);
+    }
+    
+    #menu-button.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #menu-button.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -8px);
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(30, 30, 30, 0.95);
+        z-index: 999;
+        padding: 2rem;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 1rem 0;
+        opacity: 1;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: #fff;
+        width: 100%;
+    }
+    
+    .nav-links a i {
+        margin-right: 10px;
+    }
+}
+
+/* Ajustes para área de hover nas seções */
+.hover-area-left, .hover-area-right {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    top: 0;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.hover-area-right {
+    right: 0;
+}
+
+.hover-area-left {
+    left: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .contact-item {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+/* Correções de layout específicas para problemas de faixas brancas */
+
+/* Define a cor de fundo principal do site como escura */
+html, body {
+    background-color: #1E1E1E !important; /* Mesma cor que --primary-color */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Remove espaços entre seções */
+section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Garante que todas as seções tenham um background escuro */
+section {
+    background-color: #1E1E1E;
+    position: relative;
+    z-index: 1;
+}
+
+/* Correção específica para a seção de experiência premium */
+.section-with-bg.bg-separator-1 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 4rem 1rem;
+    background-attachment: fixed;
+}
+
+/* Garantir que não haja espaço entre as seções */
+.hero + section,
+section + section {
+    margin: 0;
+    padding-top: 0;
+}
+
+/* Corrigir possíveis problemas com overflow */
+main {
+    overflow-x: hidden;
+    background-color: #1E1E1E;
+}
+
+/* Transição suave entre a seção hero e a primeira seção após o hero */
+.hero {
+    margin-bottom: 0 !important;
+    position: relative;
+    z-index: 1;
+}
+
+.section-with-bg.bg-separator-1 {
+    margin-top: 0 !important;
+    position: relative;
+    z-index: 2;
+}
+
+/* Garante sobreposição para uma transição mais suave */
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to bottom, transparent, #1E1E1E);
+    z-index: 3;
+}
+
+/* Otimizações para evitar flickers */
+.section-with-bg {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+} 
+
+/* Garante que os elementos com animação prepara não mostrem fundo branco */
+.animate-prepare {
+    background-color: #1E1E1E;
+}
+
+/* Ajustes para seções com imagem de fundo */
+.section-with-bg::before {
+    background-color: rgba(30, 30, 30, 0.7) !important;
+}
+
+/* Ajuste para garantir que a primeira seção após o hero não tenha faixa branca */
+.hero + .section-with-bg {
+    margin-top: -2px !important; /* Elimina qualquer gap */
+}
+
+/* Ajuste para todos os elementos que serão animados */
+section:not(.hero), 
+.service-card, 
+.subscription-card, 
+.barber-card-new,
+.contact-item, 
+.map-container, 
+.contact-social, 
+.scheduling-wrapper,
+.social-card,
+.app-button {
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+/* Garantir que as seções sem animação também tenham fundo escuro */
+.hero, .section-with-bg.bg-separator-1 {
+    background-color: #1E1E1E;
+}
+
+/* Correções para os novos problemas de visibilidade */
+
+/* Aumentar contraste dos títulos de seções */
+section h2,
+.barbers h2,
+.about h2,
+.subscription h2,
+.services h2,
+.contact h2 {
+    color: var(--secondary-color) !important;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+/* Ajustes específicos para a seção de barbeiros */
+.barbers h2 {
+    color: #D5A97C !important;
+    padding: 2rem 1rem 1rem;
+    background-color: #1E1E1E;
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+/* Ajustes para a seção Sobre Nós */
+.about {
+    background-color: #1E1E1E;
+    padding: 4rem 2rem;
+    color: #D5A97C;
+}
+
+.about h2 {
+    color: #D5A97C !important;
+    text-align: center;
+}
+
+.about p {
+    color: #F5F0E5;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Ajustes para o rodapé */
+.footer {
+    background-color: #262626 !important;
+    border-top: 1px solid #C08C5C;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-info {
+    text-align: left;
+    margin: 0;
+}
+
+.footer-info p {
+    color: #D5A97C !important;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.footer .social-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    border: 2px solid #D5A97C;
+    background-color: rgba(30, 30, 30, 0.8);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(213, 169, 124, 0.1) inset;
+    margin: 0;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    color: #D5A97C !important;
+}
+
+.footer .social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent, rgba(213, 169, 124, 0.05), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+    z-index: 1;
+}
+
+.footer .social-icon:hover {
+    transform: scale(1.15);
+    background-color: #D5A97C;
+    color: #1E1E1E !important;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4), 0 0 20px rgba(213, 169, 124, 0.3);
+}
+
+.footer .social-icon:hover::before {
+    transform: translateX(100%);
+}
+
+.footer .social-icon i {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .footer-info {
+        text-align: center;
+    }
+    
+    .social-links {
+        margin-top: 1rem;
+    }
+}
+
+/* Ajustes para o grid de barbeiros */
+.barbers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem 4rem;
+}
+
+/* Estilo para os cartões de barbeiros */
+.barber-card-new {
+    background-color: rgba(30, 30, 30, 0.8);
+    border: 1px solid rgba(213, 169, 124, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.barber-card-new h3 {
+    color: #D5A97C;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    background-color: rgba(30, 30, 30, 0.8);
+    font-size: 1.4rem;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo para a imagem dos barbeiros */
+.barber-image-new {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.barber-image-new img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.3s ease;
+}
+
+.barber-card-new:hover .barber-image-new img {
+    transform: scale(1.05);
+}
+
+.barber-card-new:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(213, 169, 124, 0.6);
+}
+
+/* Background para cada separador */
+.bg-separator-1 {
+    background-image: url('../images/barbearia-bg2.jpg');
+}
+
+.bg-separator-2 {
+    background-image: url('../images/barbearia-bg3.jpg');
+}
+
+.bg-separator-3 {
+    background-image: url('../images/barbearia-bg4.jpg');
+}
+
+.bg-separator-4 {
+    background-image: url('../images/barbearia-bg5.jpg');
+}
+
+/* Otimizações específicas para telas no modo paisagem */
+@media (max-width: 896px) and (orientation: landscape) {
+    /* Garantir que o hero se adapte adequadamente a telas baixas */
+    .hero {
+        height: auto !important;
+        min-height: 450px !important;
+        padding-top: 6rem !important;
+        padding-bottom: 3rem !important;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Ajuste para garantir que não haja gap entre hero e próxima seção */
+    .hero::after {
+        height: 10px;
+    }
+    
+    /* Ajustes para garantir que a logo e conteúdo estejam bem posicionados */
+    .hero-content {
+        padding: 1rem !important;
+    }
+    
+    /* Reduzir o tamanho da logo para não ocupar muito espaço vertical */
+    .hero-logo {
+        max-width: 40% !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Reduzir tamanho do texto e margins para otimizar espaço vertical */
+    .hero p {
+        font-size: 1.2rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* Reduzir tamanho do botão */
+    .hero .cta-button {
+        padding: 0.7rem 1.5rem !important;
+        font-size: 1rem !important;
+    }
+} 

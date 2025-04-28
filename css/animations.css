@@ -1,0 +1,350 @@
+/* Animações para elementos que surgem ao rolar a página */
+
+/* Estilo base para elementos preparados para animação */
+.animate-prepare {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+    will-change: opacity, transform;
+    background-color: #1E1E1E; /* Garante fundo escuro mesmo antes da animação */
+}
+
+/* Estilo quando a animação ocorre */
+.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animações específicas para a seção hero */
+.hero {
+    transition: opacity 1.5s ease-out;
+    will-change: opacity;
+    background-color: #1E1E1E;
+}
+
+.hero-content {
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+    will-change: opacity, transform;
+}
+
+/* Animações para a seção de experiência premium */
+.section-with-bg.bg-separator-1 {
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out !important;
+    will-change: opacity, transform;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #1E1E1E; /* Garante fundo escuro */
+}
+
+/* Estilo para o conteúdo da seção de experiência premium */
+.section-with-bg.bg-separator-1 .content {
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    will-change: opacity, transform;
+}
+
+.section-with-bg.bg-separator-1.animate-prepare {
+    transform: translateY(0); /* Sem movimento vertical */
+    opacity: 0.95; /* Apenas leve alteração de opacidade */
+    background-color: #1E1E1E; /* Garante fundo escuro */
+}
+
+/* Variações para diferentes elementos */
+
+/* Seções */
+section.animate-prepare {
+    transform: translateY(15px);
+    margin-top: 0; /* Evita espaços indesejados */
+    background-color: #1E1E1E; /* Garante fundo escuro */
+}
+
+section.animate-in {
+    background-color: #1E1E1E; /* Mantém fundo escuro após animação */
+}
+
+/* Cartões de serviço */
+.service-card.animate-prepare {
+    transform: translateY(15px) scale(0.97);
+    background-color: transparent; /* Fundo transparente para cartões */
+}
+
+.service-card.animate-in {
+    transform: translateY(0) scale(1);
+    background-color: transparent; /* Mantém fundo transparente */
+}
+
+/* Cartões de assinatura */
+.subscription-card.animate-prepare {
+    transform: translateY(15px) scale(0.97);
+    background-color: transparent; /* Fundo transparente para cartões */
+}
+
+.subscription-card.animate-in {
+    transform: translateY(0) scale(1);
+    background-color: transparent; /* Mantém fundo transparente */
+}
+
+/* Cartões de barbeiros */
+.barber-card-new.animate-prepare {
+    transform: translateY(15px) scale(0.97);
+    background-color: transparent; /* Fundo transparente para cartões */
+}
+
+.barber-card-new.animate-in {
+    transform: translateY(0) scale(1);
+    background-color: transparent; /* Mantém fundo transparente */
+}
+
+/* Elementos de contato */
+.contact-item.animate-prepare,
+.map-container.animate-prepare,
+.contact-social.animate-prepare,
+.scheduling-wrapper.animate-prepare {
+    transform: translateY(10px);
+    background-color: transparent; /* Fundo transparente */
+}
+
+/* Cartões sociais */
+.social-card.animate-prepare {
+    transform: translateX(-10px);
+    opacity: 0;
+    background-color: transparent; /* Fundo transparente */
+}
+
+.social-card.animate-in {
+    transform: translateX(0);
+    opacity: 1;
+    background-color: transparent; /* Mantém fundo transparente */
+}
+
+/* Botões de app */
+.app-button.animate-prepare {
+    transform: translateY(10px) scale(0.95);
+    opacity: 0;
+    background-color: transparent; /* Fundo transparente */
+}
+
+.app-button.animate-in {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    background-color: transparent; /* Mantém fundo transparente */
+}
+
+/* Efeito de fade para imagens de fundo nas seções separadoras (exceto a primeira) */
+.section-with-bg.animate-prepare:not(.bg-separator-1) {
+    background-position: center 5%;
+    background-color: #1E1E1E; /* Garante fundo escuro */
+}
+
+.section-with-bg.animate-in:not(.bg-separator-1) {
+    background-position: center center;
+    background-color: #1E1E1E; /* Mantém fundo escuro */
+}
+
+.section-with-bg {
+    transition: background-position 0.3s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out;
+    background-color: #1E1E1E; /* Garante que todas as seções tenham fundo escuro */
+}
+
+/* Correção para evitar espaços em branco */
+main {
+    overflow: hidden; /* Evita que os efeitos de translação criem barras de rolagem temporárias */
+    background-color: #1E1E1E; /* Fundo escuro para o conteúdo principal */
+}
+
+/* Garante que não haja espaços indesejados entre seções */
+section {
+    margin-bottom: 0;
+    position: relative;
+    background-color: #1E1E1E; /* Fundo escuro para todas as seções */
+}
+
+/* Remove qualquer espaço entre as seções */
+.hero + section, 
+section + section {
+    margin-top: 0;
+    padding-top: 0;
+} 
+
+/* Adiciona uma pequena sobreposição entre seções para evitar qualquer gap */
+.hero + .section-with-bg {
+    margin-top: -2px;
+} 
+
+/* Efeito de pulsação nos botões da seção "baixe nosso app" */
+@keyframes pulseButton {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(213, 169, 124, 0.3);
+    }
+    
+    70% {
+        transform: scale(1.03);
+        box-shadow: 0 0 0 8px rgba(213, 169, 124, 0);
+    }
+    
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(213, 169, 124, 0);
+    }
+}
+
+@keyframes glowButton {
+    0% {
+        border-color: rgba(213, 169, 124, 0.7);
+    }
+    50% {
+        border-color: rgba(213, 169, 124, 1);
+    }
+    100% {
+        border-color: rgba(213, 169, 124, 0.7);
+    }
+}
+
+.app-button {
+    animation: pulseButton 2.5s infinite, glowButton 3.5s infinite;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right, 
+        rgba(255, 255, 255, 0) 0%, 
+        rgba(255, 255, 255, 0.15) 50%, 
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    animation: shineEffect 6s infinite;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes shineEffect {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) translateY(-100%) rotate(30deg);
+    }
+    20% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.2;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%) translateY(100%) rotate(30deg);
+    }
+}
+
+.app-button:hover {
+    animation-play-state: paused;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(213, 169, 124, 0.4);
+}
+
+.app-button:hover::after {
+    animation-play-state: paused;
+}
+
+/* Animações para a seção de FAQ */
+.faq-card.animate-prepare {
+    transform: translateY(15px) scale(0.97);
+    opacity: 0;
+    background-color: transparent;
+}
+
+.faq-card.animate-in {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    background-color: transparent;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out, padding 0.2s ease-out, opacity 0.15s ease-out;
+    opacity: 0;
+}
+
+.faq-card.active .faq-answer {
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 0.4s ease-in, padding 0.4s ease-in, opacity 0.25s ease-in;
+}
+
+.faq-toggle {
+    transition: transform 0.3s ease;
+}
+
+.faq-card.active .faq-toggle {
+    transform: rotate(180deg);
+}
+
+/* Animação suave para o ícone de bigode */
+@keyframes cutWiggle {
+    0% { transform: scale(1) rotate(0deg); color: #D9A658; }
+    25% { transform: scale(1.1) rotate(-10deg); color: #e0b26a; }
+    50% { transform: scale(1.15) rotate(0deg); color: #D9A658; }
+    75% { transform: scale(1.1) rotate(10deg); color: #cb9948; }
+    100% { transform: scale(1) rotate(0deg); color: #D9A658; }
+}
+
+.mustache-icon i {
+    display: inline-block;
+    animation: cutWiggle 5s ease-in-out infinite;
+    transform-origin: center;
+    text-shadow: 0 0 12px rgba(217, 166, 88, 0.4);
+    transition: transform 0.3s ease;
+    opacity: 1 !important;
+    visibility: visible !important;
+    font-size: 1.9rem;
+    color: #D9A658;
+}
+
+.mustache-icon:hover i {
+    transform: scale(1.3) rotate(180deg);
+    animation-play-state: paused;
+    color: #e0b26a;
+    text-shadow: 0 0 15px rgba(217, 166, 88, 0.7);
+}
+
+@keyframes mustacheLineWiggle {
+    0% { width: 30px; opacity: 0.7; }
+    50% { width: 35px; opacity: 0.9; }
+    100% { width: 30px; opacity: 0.7; }
+}
+
+.mustache-icon::before,
+.mustache-icon::after {
+    animation: mustacheLineWiggle 8s ease-in-out infinite;
+}
+
+/* Remover classes que fazem o ícone desaparecer */
+.mustache-icon {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* 
+.mustache-icon.animate-prepare {
+    opacity: 0;
+    transform: translateY(10px) scale(0.8);
+}
+*/
+
+.mustache-icon.animate-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+} 
